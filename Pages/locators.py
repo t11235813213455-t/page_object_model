@@ -12,4 +12,4 @@ class ProductPageLocators():
     MESSAGE_ABOUT_ADDING_TO_BASKET = (By.CSS_SELECTOR, "#messages div:first-child div")
     BOOK_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRICE = (By.CSS_SELECTOR, "p.price_color")
-    PRICE_MSG = (By.CSS_SELECTOR, "#messages div:nth-child(3) div p:nth-child(1)")
+    PRICE_MSG = (By.CSS_SELECTOR, "#messages div:nth-child(3) p:nth-child(1)")
