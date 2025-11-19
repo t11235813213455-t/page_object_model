@@ -17,7 +17,8 @@ class ProductPage(BasePage):
 
     def should_be_msg_about_adding_to_basket(self, book_name, price):
         msg = self.get_text_of_element(*ProductPageLocators.MESSAGE_ABOUT_ADDING_TO_BASKET)
+        book_name_in_msg = self.get_text_of_element(*ProductPageLocators.BOOK_NAME_IN_MSG)
         price_msg = self.get_text_of_element(*ProductPageLocators.PRICE_MSG)
         assert "has been added to your basket." in msg, "Message 'has been added to your basket' is absent" 
-        assert book_name in msg, "Book title in the message is incorrect"
+        assert book_name == book_name_in_msg, "Book title in the message is incorrect"
         assert price in price_msg, "Book price in the message is incorrect"

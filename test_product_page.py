@@ -4,10 +4,11 @@ from Pages.login_page import LoginPage
 from Pages.product_page import ProductPage
 import time
 from selenium.common.exceptions import NoSuchElementException
+import pytest
 
-
-def test_guest_can_add_product_to_basket(browser):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+@pytest.mark.parametrize('promo_offer', [pytest.param(i, marks=pytest.mark.xfail(i==7, reason='known bug')) for i in range(10)])
+def test_guest_can_add_product_to_basket(browser, promo_offer):
+    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
     page = ProductPage(browser, link)    
     page.open()   
     page.add_to_basket()
