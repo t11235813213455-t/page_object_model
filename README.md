@@ -12,6 +12,6 @@ It contains the following tests:
 8. TestUserAddToBasketFromProductPage::test_user_can_add_product_to_basket (**need_review**)
 9. TestUserAddToBasketFromProductPage::test_user_cant_see_success_message
 
-## Test for main page:
+## Tests for main page:
 1. test_guest_can_go_to_login_page
 2. test_guest_cant_see_product_in_basket_opened_from_main_page
