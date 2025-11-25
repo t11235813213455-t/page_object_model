@@ -1,2 +1,2 @@
-# Игнорировать файлы с расширением .pyc
+# ignore files with extenstion .pyc
 *.pyc
